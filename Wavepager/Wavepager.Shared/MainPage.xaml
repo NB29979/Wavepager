@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="Wavepager.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Vertical" >
+            <Image x:Name="IMG_QrCode"
+                       Margin="20,20,20,5"
+                       RenderTransformOrigin="0.5,0.5"
+                       Source="/Assets/Square150x150Logo.scale-200.png" Height="250" Width="250"/>
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Width="199">
+                <Button x:Name="BTN_SetToken"
+                       HorizontalAlignment="Center"
+                       Margin="10"
+                       Click="BTN_SetToken_Click"
+                       Content="Set Token" Width="80" />
+                <Button x:Name="BTN_Initialize"
+                       HorizontalAlignment="Center"
+                       Margin="10"
+                       Click="BTN_Initialize_Click"
+                       Content="Initialize" Width="80" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBox x:Name="TXB_URL"
+                       HorizontalAlignment="Center"
+                        Margin="10"
+                       Text="" TextWrapping="Wrap" Width="250" PlaceholderText="URL"/>
+                <Button x:Name="BTN_SendURL"
+                       HorizontalAlignment="Center"
+                       Margin="5"
+                       Click="BTN_SendURL_Click"
+                       Content="Send" Width="60" />
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Page>
