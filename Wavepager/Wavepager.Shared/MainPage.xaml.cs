@@ -29,11 +29,12 @@ namespace Wavepager
             {
                 qrText = scannedResult.ToString();
                 URLReceiver.SetProp(qrText);
+                URLSender.SetProp(qrText);
                 generateQrImage(qrText);
                 URLReceiver.OnStarted();
                 URLSender.OnStarted();
                 URLReceiver.Connect();
-                URLSender.OnStarted();
+                URLSender.Connect();
             }
             // QRコードを読み込んで遷移していないが，すでにQRPropはある状態
             else if (URLReceiver.Prop.PropStatus == URLReceiver.ChannelProperty.PropState.PROP_SET)
@@ -54,7 +55,9 @@ namespace Wavepager
         public void BTN_SendURL_Click(object sender, RoutedEventArgs e)
         {
             var inputURL = TXB_URL.Text.ToString();
-            URLSender.PublishUrl(inputURL);
+            if(!URLSender.IsInitialized()){
+                URLSender.PublishUrl(inputURL);
+            }
         }
 
         public void BTN_SetToken_Click(object sender, RoutedEventArgs e)
@@ -81,6 +84,7 @@ namespace Wavepager
         private void SetInitialImage()
         {
             URLReceiver.Initialize();
+            URLSender.Initialize();
 
             var uri =new Uri (@"ms-appx:///Square150x150Logo_scale_200.png");
             IMG_QrCode.Source = new BitmapImage(uri);
