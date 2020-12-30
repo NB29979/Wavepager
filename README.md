@@ -1,7 +1,7 @@
 ![wavepager-logo-whited](https://user-images.githubusercontent.com/12462512/103173316-8e560700-489d-11eb-8c8a-ac5e4f8104b3.png)
 
 # Outline
-This is the URL sender/receiver software.This can publish the input URL to other devices connected via MQTT,then these devices open the URL at the same time.The sender device can use as a receiver.This is impelemented in UWP/Android with [Uno platform](https://platform.uno/).
+This is the URL sharing software.This can publish the input URL to other devices connected via MQTT,then these devices open the URL at the same time.The sender device can use as a receiver.This is impelemented in UWP/Android with [Uno platform](https://platform.uno/).
 
 # Environment
 * Uno.UI: v3.3.0
