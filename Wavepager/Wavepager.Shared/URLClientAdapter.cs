@@ -71,6 +71,11 @@ namespace Wavepager.Shared
         {
             Prop.Initialize();
         }
+        
+        public bool IsInitialized()
+        {
+            return Prop.PropStatus == ChannelProperty.PropState.PROP_INITIALIZED;
+        }
 
         public void SetProp(string json)
         {
