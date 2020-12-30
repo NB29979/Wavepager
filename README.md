@@ -12,4 +12,4 @@ This is the URL sharing software.This can publish the input URL to other devices
 * Microsoft.Extensions.Logging.Console: v1.1.1
 
 # Screenshot
-![Slide1](https://user-images.githubusercontent.com/12462512/103173325-9ca42300-489d-11eb-881c-771c781af108.png)
+![screenshot](https://user-images.githubusercontent.com/12462512/103367377-438bf780-4b08-11eb-9812-a0cdabcd5ab1.png)
