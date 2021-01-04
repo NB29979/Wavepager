@@ -1,2 +1,6 @@
 {
+  "Host": "MQTT_HOST",
+  "Topic": "TOPIC",
+  "Token": "TOKEN",
+  "Port": PORT_NUM
 }
